@@ -35,7 +35,12 @@
         align-items: center;
         text-decoration: none;
         color: var(--basic-white);
+        &_active{
+            padding: 5px 7px;
+            border-radius: 8px;
+            background: var(--Accent);
 
+        }
         &:hover {
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.20);
@@ -43,6 +48,12 @@
         }
 
         &:focus {
+            padding: 5px 7px;
+            border-radius: 8px;
+            background: var(--Accent);
+        }
+
+        &:active {
             padding: 5px 7px;
             border-radius: 8px;
             background: var(--Accent);
