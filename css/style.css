@@ -673,7 +673,7 @@ a {
   position: relative;
 }
 .header-content__provider {
-  background-image: url(/icons/Symbol1.svg);
+  background-image: url(../icons/symbol-provider.svg);
   max-width: 872px;
   width: 100%;
   height: 1000px;
