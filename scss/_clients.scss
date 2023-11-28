@@ -1,0 +1,132 @@
+@mixin blow-alignment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+
+    @media screen and (max-width:1440px) {
+        margin-bottom: 0;
+    }
+}
+
+.clients {
+    &__text {
+        color: var(--main-regular);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+    }
+
+    &__grid-list {
+        overflow: hidden;
+        border-radius: 12px;
+        max-width: 1720px;
+        width: 100%;
+        height: 360px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        @media screen and (max-width:1440px) {
+            border-radius: 0;
+        }
+
+        @media screen and (max-width:768px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 120px);
+            height: 480px;
+        }
+
+        @media screen and (max-width:540px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 120px);
+            height: 720px;
+
+
+        }
+    }
+
+    // ЗРОБИТИ HOVER
+    &__item-hillel {
+        @include blow-alignment;
+        background: #1C4280;
+        transition: 1s;
+
+        &:hover {
+            transition: 1s;
+            background-color: #9E4DC3;
+        }
+    }
+
+    &__img {
+        transition: 0.4s;
+
+        &:hover {
+            scale: 1.2;
+
+        }
+    }
+
+    &__item-wannabiz {
+        @include blow-alignment;
+        background: #143646;
+    }
+
+    &__item-tapgerine {
+        @include blow-alignment;
+        background: linear-gradient(0deg, #F48B30 0%, #F48B30 100%), #F48B30;
+    }
+
+    &__item-3dlook {
+        @include blow-alignment;
+        background: #9E4DC3;
+    }
+
+    &__item-orangear {
+        @include blow-alignment;
+        background: #FD9339;
+    }
+
+    &__item-adtelligent {
+        @include blow-alignment;
+        background: #E2E2E4;
+    }
+
+    &__item-clickky {
+        @include blow-alignment;
+        background: #C71C36;
+    }
+
+    &__item-eco-leasing {
+        @include blow-alignment;
+        background: #DCF3F9;
+    }
+
+    &__item-infratek {
+        @include blow-alignment;
+        background: #EAEAEA;
+    }
+
+    &__item-city-par {
+        @include blow-alignment;
+        background: #282240;
+    }
+
+    &__item-artprint {
+        @include blow-alignment;
+        background: #1D4568;
+    }
+
+    &__item-ultimatecard {
+        @include blow-alignment;
+        background: #000;
+    }
+}

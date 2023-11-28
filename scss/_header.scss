@@ -1,0 +1,67 @@
+.content {
+    background-image: var(--gradient-supersoft);
+    border-radius: 0px 0px 12px 12px;
+}
+
+.header {
+    padding-top: 50px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 16px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    @media screen and (max-width:840px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-row-gap: 30px;
+    }
+
+    @media screen and (max-width:540px) {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, 45px);
+        padding-top: 0;
+        gap: 0;
+
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .reset-margin {
+        /* Новые стили, которые вы хотите применить при адаптивном дизайне */
+        padding: 0;
+        margin: 0;
+        max-width: 540px;
+        width: 100%;
+
+    }
+
+}
+
+.logo {
+    grid-row: 1/3;
+    grid-column: 1/2;
+
+
+    @media screen and (max-width:840px) {
+        grid-row: 2/3;
+    }
+
+    @media screen and (max-width:540px) {
+        grid-row: 2/3;
+        margin-top: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .logo-header {
+        height: 32px;
+    }
+}
+

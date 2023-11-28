@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    background: #FFF;
+}
+
+a,
+button,
+circle,
+path {
+    transition: .5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--main-regular);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+p {
+    color: var(--basic-black);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.5%;
+}
+
+.container {
+    max-width: 1660px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media screen and (max-width:1440px) {
+        max-width: 1380px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    @media screen and (max-width:1024px) {
+        max-width: 964px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    @media screen and (max-width:768px) {
+        max-width: 708px;
+        margin: 0 auto;
+        padding: 0 30px;
+
+    }
+
+    @media screen and (max-width:540px) {
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+}
+
+a {
+    text-decoration: none;
+    /* Убираем подчеркивание */
+    color: inherit;
+    /* Наследуем цвет текста от родительского элемента */
+    cursor: pointer;
+    /* Устанавливаем курсор в виде стрелки */
+}
+
+.title-red {
+    background: var(--gradient-red-text, linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 38px;
+}
+
+// FACEBOOK IMG
+#Vector-facebook {
+    &:hover {
+        fill: var(--Accent);
+    }
+}
+

@@ -1,0 +1,141 @@
+.team-content {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (max-width:540px) {
+        padding: 30px 30px 60px 30px;
+    }
+}
+
+.team {
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    border-radius: 12px;
+    background: var(--grey-bg);
+    margin-bottom: 28px;
+    transition: .3s;
+
+    &:hover {
+        scale: 1.03;
+        translate: -0 -10px;
+        box-shadow: 0px 8px 17px 7px rgba(0, 0, 0, 0.64);
+        -webkit-box-shadow: 0px 8px 17px 7px rgba(0, 0, 0, 0.64);
+        -moz-box-shadow: 0px 8px 17px 7px rgba(0, 0, 0, 0.64);
+    }
+
+    @media screen and (max-width:1440px) {
+        max-width: 1320px;
+        width: 100%;
+
+    }
+
+    @media screen and (max-width:1024px) {
+        max-width: 904px;
+        width: 100%;
+        height: 528px;
+    }
+
+    @media screen and (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        max-width: 648px;
+        width: 100%;
+        height: 936px;
+    }
+
+    @media screen and (max-width:540px) {
+        height: 1090px;
+    }
+
+    &__img {
+        background-image: url(../img/oleksandr.jpg);
+        max-width: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 12px 0px 0px 12px;
+
+        @media screen and (max-width:768px) {
+            max-width: 648px;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 12px 12px 0px 0px;
+        }
+    }
+
+    &__item {
+        padding: 30px;
+
+
+        @media screen and (max-width:1024px) {
+            max-width: 504px;
+        }
+
+        @media screen and (max-width:768px) {
+            max-width: 648px;
+            height: 376px;
+        }
+    }
+
+    &__link {
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+
+        @media screen and (max-width:540px) {
+            font-size: 30px;
+        }
+    }
+
+    &__person-name {
+        margin-bottom: 6px;
+        color: var(--grey-text);
+        font-weight: 700;
+        font-size: 16px;
+
+    }
+
+    &__person-position {
+        color: var(--grey-text);
+        font-size: 14px;
+        line-height: 157%;
+    }
+
+    &__slider {
+        display: flex;
+        gap: 15px;
+
+    }
+
+    &__slider-button {
+        display: inline-flex;
+        border: transparent;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background-color: var(--active-regular);
+        opacity: 0.2;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 0px 5px 5px rgba(106, 38, 194, 1);
+            opacity: 1;
+            background-color: rgba(106, 38, 194, 0.73);
+            border: none;
+        }
+
+        &_active {
+            background-color: var(--active-regular);
+            opacity: 1;
+        }
+    }
+
+
+}

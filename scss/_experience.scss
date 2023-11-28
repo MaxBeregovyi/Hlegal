@@ -1,0 +1,129 @@
+.experience-content {
+    padding: 79px 0;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width:1024px) {
+        padding: 68px 0;
+    }
+
+    @media screen and (max-width:768px) {
+        padding: 60px;
+    }
+
+    @media screen and (max-width:540px) {
+        padding: 30px;
+    }
+}
+
+.eperience-box {
+    display: flex;
+    gap: 60px;
+    max-width: 1360px;
+    width: 100%;
+    align-items: center;
+
+    @media screen and (max-width:1440px) {
+        max-width: 1080px;
+        width: 100%;
+    }
+
+    @media screen and (max-width:1024px) {
+        max-width: 904px;
+        width: 100%;
+    }
+
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    @media screen and (max-width:540px) {
+        gap: 30px;
+    }
+}
+
+.left-wrapper {
+    max-width: 375px;
+    width: 100%;
+    text-align: right;
+
+    @media screen and (max-width:768px) {
+        max-width: 768px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+
+        @media screen and (max-width:1440px) {
+            white-space: nowrap;
+
+        }
+
+        @media screen and (max-width:768px) {
+            flex-direction: row;
+            overflow: auto;
+        }
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__link {
+        color: var(--grey-text);
+        font-size: 38px;
+        font-weight: 700;
+
+        &:hover {
+            color: var(--Accent);
+        }
+
+        &:focus {
+            background: var(--gradient-text-red-reversed, linear-gradient(90deg, #EF8080 0.84%, #F0145A 99.96%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media screen and (max-width:540px) {
+            font-size: 30px;
+        }
+    }
+}
+
+.line-wrapper {
+    border-left: 4px solid rgba(255, 255, 255, 0.30);
+    height: 100%;
+    width: 1px;
+
+    @media screen and (max-width:768px) {
+        border-top: 4px solid rgba(255, 255, 255, 0.30);
+        max-width: 648px;
+        width: 100%;
+    }
+}
+
+.right-wrapper {
+    &__title {
+        color: var(--basic-white);
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        @media screen and (max-width:540px) {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        color: var(--basic-white);
+        font-size: 19px;
+    }
+
+    @media screen and (max-width:768px) {
+        max-width: 648px;
+        text-align: left;
+    }
+}

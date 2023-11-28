@@ -1,0 +1,145 @@
+.footer {
+    padding-top: 26px;
+    padding-bottom: 30px;
+    background-color: var(--grey-bg);
+
+    &__line {
+        margin-bottom: 30px;
+        height: 2px;
+        background: var(--grey-separator);
+        border: none;
+    }
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    row-gap: 20px;
+
+    @media screen and (max-width:540px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+
+    &__address-list {
+        display: flex;
+        gap: 26px;
+        list-style: none;
+
+        @media screen and (max-width:540px) {
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+
+    &__address-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:nth-child(1) {
+            color: var(--main-regular);
+            font-style: normal;
+        }
+
+        &:nth-child(2) {
+            color: var(--active-regular, #24A3FF);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 6px;
+                height: 6px;
+                background-color: var(--grey-text);
+                border-radius: 100px;
+                left: -14px;
+            }
+        }
+    }
+
+    &__address-link {
+        text-decoration: none;
+
+        &:hover {
+            color: var(--Accent);
+        }
+    }
+
+    &__contacts-list {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: flex;
+        align-items: center;
+        gap: 26px;
+
+        @media screen and (max-width:768px) {
+            grid-column: 1/4;
+        }
+
+        @media screen and (max-width:540px) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__item {
+        list-style: none;
+        color: var(--main-alt);
+        font-weight: 700;
+
+        &:nth-child(1) ::before {
+            content: none;
+        }
+
+        &:nth-child(3) {
+            color: var(--active-regular, #24A3FF);
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            color: var(--Accent);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--grey-text);
+            border-radius: 100px;
+            left: -14px;
+        }
+    }
+
+    &__politic-company {
+        grid-column: 3/4;
+        text-align: right;
+        color: var(--grey-text);
+        text-align: right;
+
+        @media screen and (max-width:540px) {
+            grid-row: 3/4;
+            grid-column: 1/2;
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}
