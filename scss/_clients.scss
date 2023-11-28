@@ -49,12 +49,9 @@
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(6, 120px);
             height: 720px;
-
-
         }
     }
 
-    // ЗРОБИТИ HOVER
     &__item-hillel {
         @include blow-alignment;
         background: #1C4280;

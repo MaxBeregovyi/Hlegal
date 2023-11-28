@@ -48,10 +48,6 @@
     width: 100%;
     text-align: right;
 
-    @media screen and (max-width:768px) {
-        max-width: 768px;
-    }
-
     &__list {
         display: flex;
         gap: 30px;
@@ -91,6 +87,10 @@
         @media screen and (max-width:540px) {
             font-size: 30px;
         }
+    }
+
+    @media screen and (max-width:768px) {
+        max-width: 768px;
     }
 }
 
